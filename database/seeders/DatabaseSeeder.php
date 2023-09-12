@@ -20,5 +20,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $this->call([CategorySeeder::class]);
+        $this->call([SosialMediaSeeder::class]);
+        $this->call([PageSeeder::class]);
     }
 }
