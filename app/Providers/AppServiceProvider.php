@@ -22,6 +22,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Filament::serving(function () {
+            Filament::registerViteTheme('resources/css/filament.css');
+
             Filament::registerNavigationItems([
                 NavigationItem::make('Visit Website')
                     ->url('/', shouldOpenInNewTab: true)
