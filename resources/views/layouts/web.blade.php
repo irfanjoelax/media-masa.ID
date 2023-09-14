@@ -8,7 +8,7 @@
 
     <title>@yield('title') | {{ env('APP_NAME') }}</title>
 
-    @yield('meta')
+    @yield('meta-tag')
 
     <!-- Favicon -->
     <link href="{{ asset('img/logo.png') }}" rel="icon">
@@ -25,6 +25,8 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ asset('magazine') }}/css/style.css" rel="stylesheet">
+
+    @yield('extra-style')
 </head>
 
 <body>
@@ -67,6 +69,7 @@
     <!-- Template Javascript -->
     <script src="{{ asset('magazine') }}/js/main.js"></script>
     <script src="{{ asset('magazine') }}/js/date.js"></script>
+    @yield('extra-script')
 </body>
 
 </html>
