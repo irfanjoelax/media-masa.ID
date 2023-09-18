@@ -7,7 +7,7 @@
                     <h3 class="m-0">{{ $category->name }}</h3>
                 </div>
                 <div class="owl-carousel owl-carousel-3 carousel-item-2 position-relative">
-                    @foreach ($category->blogs as $blog)
+                    @foreach ($category->blogs->take(4)->sortByDesc('created_at') as $blog)
                     <div class="position-relative">
                         <img class="img-fluid w-100" src="{{ asset('storage/'. $blog->image) }}" style="object-fit: cover;">
                         <div class="overlay position-relative bg-light">
