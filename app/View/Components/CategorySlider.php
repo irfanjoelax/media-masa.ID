@@ -24,7 +24,7 @@ class CategorySlider extends Component
     {
         $data['categories'] = Category::with([
             'blogs' => function ($query) {
-                $query->latest()->limit(4)->get();
+                $query->latest()->limit(4);
             }
         ])->orderBy('name')->get();
 
