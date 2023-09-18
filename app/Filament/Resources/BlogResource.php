@@ -49,7 +49,7 @@ class BlogResource extends Resource
                                 ->placeholder('Enter blog title')
                                 ->maxLength(200)
                                 ->reactive()
-                                ->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state)))
+                                ->afterStateUpdated(fn($state, callable $set) => $set('slug', Str::slug($state)))
                                 ->required(),
 
                             Hidden::make('slug')
@@ -111,6 +111,7 @@ class BlogResource extends Resource
                 ImageColumn::make('image'),
 
                 TextColumn::make('title')
+                    ->searchable()
                     ->wrap(),
 
                 BadgeColumn::make('category.name')

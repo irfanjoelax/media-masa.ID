@@ -12,7 +12,7 @@
                                 <span class="px-2 text-white">/</span>
                                 <span class="text-white">{{ $mainNews->created_at->diffForHumans() }}</span>
                             </div>
-                            <a class="h2 m-0 text-white font-weight-bold" href="{{ url('blog/'. $mainNews->slug, []) }}">
+                            <a class="h2 m-0 text-white font-weight-bold" href="{{ url('blog/'. $mainNews->slug) }}">
                                 {{ $mainNews->title }}
                             </a>
                         </div>

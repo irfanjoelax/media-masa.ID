@@ -22,9 +22,11 @@ class CategorySlider extends Component
      */
     public function render(): View|Closure|string
     {
-        $data['categories'] =  Category::with(['blogs' => function ($query) {
-            $query->latest()->take(4);
-        }])->orderBy('name')->get();
+        $data['categories'] = Category::with([
+            'blogs' => function ($query) {
+                $query->latest()->limit(4)->get();
+            }
+        ])->orderBy('name')->get();
 
         return view('components.category-slider', $data);
     }
