@@ -13,6 +13,7 @@ use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Resources\Form;
@@ -49,7 +50,7 @@ class BlogResource extends Resource
                                 ->placeholder('Enter blog title')
                                 ->maxLength(200)
                                 ->reactive()
-                                ->afterStateUpdated(fn($state, callable $set) => $set('slug', Str::slug($state)))
+                                ->afterStateUpdated(fn ($state, callable $set) => $set('slug', Str::slug($state)))
                                 ->required(),
 
                             Hidden::make('slug')
@@ -91,6 +92,8 @@ class BlogResource extends Resource
                                 ->enableDownload()
                                 ->directory('blogs')
                                 ->required(),
+
+                            Textarea::make('caption'),
 
                             DatePicker::make('date_published')
                                 ->default(now())
