@@ -42,12 +42,15 @@
                     </div>
                     @foreach ($blog_tranding as $tranding)
                     <div class="d-flex mb-3">
-                        <img src="{{ asset('storage/'. $tranding->image) }}" style="width: 100px; height: 100px; object-fit: cover;">
-                        <div class="w-100 d-flex flex-column justify-content-center bg-light px-3" style="height: 100px;">
+                        <img src="{{ asset('storage/'. $tranding->image) }}"
+                            style="width: 100px; height: 100px; object-fit: cover;">
+                        <div class="w-100 d-flex flex-column justify-content-center bg-light px-3"
+                            style="height: 100px;">
                             <div class="mb-1" style="font-size: 13px;">
-                                <a href="{{ url('category/'. $tranding->category->slug) }}">{{ $tranding->category->name }}</a>
+                                <a href="{{ url('category/'. $tranding->category->slug) }}">{{ $tranding->category->name
+                                    }}</a>
                                 <span class="px-1">/</span>
-                                <span>{{ $tranding->created_at->diffForHumans() }}</span>
+                                <span>{{ $tranding->date_published->diffForHumans() }}</span>
                             </div>
                             <a class="h6 m-0" href="{{ url('blog/'. $tranding->slug) }}">{{ $tranding->title }}</a>
                         </div>

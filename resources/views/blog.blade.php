@@ -30,7 +30,7 @@
                         <div class="mb-3">
                             <a href="{{ url('category/'. $blog->category->slug) }}">{{ $blog->category->name }}</a>
                             <span class="px-1">/</span>
-                            <span>{{ $blog->created_at->format('d F Y') }}</span>
+                            <span>{{ $blog->date_published->format('d F Y') }}</span>
                             <span class="px-1">/</span>
                             <span>{{ $blog->hit }} views</span>
                         </div>
@@ -72,7 +72,7 @@
                                 <a href="{{ url('category/'. $serupa->category->slug) }}">{{ $serupa->category->name
                                     }}</a>
                                 <span class="px-1">/</span>
-                                <span>{{ $serupa->created_at->diffForHumans() }}</span>
+                                <span>{{ $serupa->date_published->diffForHumans() }}</span>
                             </div>
                             <a class="h6 m-0" href="{{ url('blog/'. $serupa->slug) }}">{{ $serupa->title }}</a>
                         </div>

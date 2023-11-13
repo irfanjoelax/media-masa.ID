@@ -9,12 +9,13 @@
                 <div class="owl-carousel owl-carousel-3 carousel-item-2 position-relative">
                     @foreach ($category->blogs->take(4)->sortByDesc('created_at') as $blog)
                     <div class="position-relative">
-                        <img class="img-fluid w-100" src="{{ asset('storage/'. $blog->image) }}" style="object-fit: cover;">
+                        <img class="img-fluid w-100" src="{{ asset('storage/'. $blog->image) }}"
+                            style="object-fit: cover;">
                         <div class="overlay position-relative bg-light">
                             <div class="mb-2" style="font-size: 13px;">
-                                <a href="{{ url('category/'. $blog->category->slug) }}">{{  $blog->category->name }}</a>
+                                <a href="{{ url('category/'. $blog->category->slug) }}">{{ $blog->category->name }}</a>
                                 <span class="px-1">/</span>
-                                <span>{{ $blog->created_at->diffForHumans() }}</span>
+                                <span>{{ $blog->date_published->diffForHumans() }}</span>
                             </div>
                             <a class="h5 m-0" href="{{ url('blog/'. $blog->slug) }}">{{ $blog->title }}</a>
                         </div>

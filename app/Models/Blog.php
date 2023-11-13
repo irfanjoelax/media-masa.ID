@@ -15,6 +15,7 @@ class Blog extends Model
      * @var array
      */
     protected $casts = [
+        'date_published' => 'date',
         'is_published' => 'boolean',
     ];
 
