@@ -52,9 +52,9 @@
 
             <div class="col-lg-4 pt-3 pt-lg-0">
                 <!-- Ads Start -->
-                <div class="mb-3 pb-3">
+                {{-- <div class="mb-3 pb-3">
                     <img class="img-fluid" src="{{ asset('img/ads-example.jpeg') }}" alt="">
-                </div>
+                </div> --}}
                 <!-- Ads End -->
 
                 <!-- Popular News Start -->
@@ -72,9 +72,10 @@
                                 <a href="{{ url('category/'. $serupa->category->slug) }}">{{ $serupa->category->name
                                     }}</a>
                                 <span class="px-1">/</span>
-                                <span>{{ $serupa->date_published->diffForHumans() }}</span>
+                                <span>{{ $serupa->date_published->format('d F Y') }}</span>
                             </div>
-                            <a class="h6 m-0" href="{{ url('blog/'. $serupa->slug) }}">{{ $serupa->title }}</a>
+                            <a class="h6 m-0" href="{{ url('blog/'. $serupa->slug) }}" style="font-size: 11px;">{{
+                                $serupa->title }}</a>
                         </div>
                     </div>
                     @endforeach

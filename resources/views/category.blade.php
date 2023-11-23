@@ -71,6 +71,10 @@
                             </div>
                         </div>
                         @endforeach
+
+                        <div>
+                            {{ $list_blogs->links() }}
+                        </div>
                     </div>
                 </div>
             </div>

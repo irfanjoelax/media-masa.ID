@@ -18,8 +18,7 @@ Route::get('/category/{slug}', function ($slug) {
     $data['list_blogs'] = Blog::with('category')
         ->where('category_id', $data['category']->id)
         ->latest()
-        ->limit(10)
-        ->get();
+        ->paginate(1);
 
     $data['trending_blogs'] = Blog::with('category')
         ->where('category_id', $data['category']->id)
