@@ -1,8 +1,8 @@
 <div class="container-fluid">
-    <div class="row align-items-center text-white px-lg-5" style="background-color: #A14DA8">
+    <div class="row align-items-center text-white px-lg-5" style="background-color: #1E0FEE">
         <div class="col-12 col-md-8">
             <div class="d-flex justify-content-between">
-                <div class="bg-primary text-white text-center py-2" style="width: 100px;">Trending</div>
+                <div class="bg-gray text-white text-center py-2" style="width: 100px;">Trending</div>
                 <div class="owl-carousel owl-carousel-1 tranding-carousel position-relative d-inline-flex align-items-center ml-3"
                     style="width: calc(100% - 100px); padding-left: 90px;">
                     @foreach ($blogsTrending as $trending)
