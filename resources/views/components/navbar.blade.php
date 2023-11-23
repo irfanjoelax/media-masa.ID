@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg bg-light navbar-light py-2 py-lg-0 px-lg-5">
         <a href="" class="navbar-brand d-block d-lg-none">
             {{-- <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">Media</span>Masaid</h1> --}}
-            <img src="{{ asset('img/logo-text.png') }}" width="150" alt="Logo">
+            <img src="{{ asset('img/logo-ada-putihnya.png') }}" width="150" alt="Logo">
         </a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
