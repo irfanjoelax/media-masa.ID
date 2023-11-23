@@ -15,7 +15,7 @@
                             <div class="mb-2" style="font-size: 13px;">
                                 <a href="{{ url('category/'. $blog->category->slug) }}">{{ $blog->category->name }}</a>
                                 <span class="px-1">/</span>
-                                <span>{{ $blog->date_published->diffForHumans() }}</span>
+                                <span>{{ $blog->date_published->format('d F Y') }}</span>
                             </div>
                             <a class="h5 m-0" href="{{ url('blog/'. $blog->slug) }}">{{ $blog->title }}</a>
                         </div>

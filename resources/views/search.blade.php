@@ -1,6 +1,6 @@
 @extends('layouts.web')
 
-@section('title', 'Kategori')
+@section('title', 'Pencarian')
 
 @section('content')
 {{--
@@ -36,8 +36,8 @@
     <div class="container">
         <nav class="breadcrumb bg-transparent m-0 p-0">
             <a class="breadcrumb-item" href="{{ url('/') }}">Home</a>
-            <span class="breadcrumb-item" href="#">Category</span>
-            <span class="breadcrumb-item active">{{ $category->name }}</span>
+            <span class="breadcrumb-item" href="#">Pencarian</span>
+            <span class="breadcrumb-item active">{{ $_GET['keyword'] ?? ''}}</span>
         </nav>
     </div>
 </div>
@@ -51,7 +51,7 @@
                 <div class="row mb-3">
                     <div class="col-12">
                         <div class="d-flex align-items-center justify-content-between bg-light py-2 px-4 mb-3">
-                            <h3 class="m-0">{{ $category->name }}</h3>
+                            <h3 class="m-0">Pencarian: '{{ $_GET['keyword'] ?? '' }}'</h3>
                         </div>
                     </div>
                     <div class="col-lg-12">
@@ -87,7 +87,7 @@
                     <div class="bg-light py-2 px-4 mb-3">
                         <h3 class="m-0">Tranding</h3>
                     </div>
-                    @foreach ($trending_blogs as $trendBlog)
+                    @foreach ($blog_tranding as $trendBlog)
                     <div class="d-flex mb-3">
                         <img src="{{ asset('storage/'. $trendBlog->image) }}"
                             style="width: 100px; height: 100px; object-fit: cover;">

@@ -30,9 +30,9 @@
 
             <div class="col-lg-4 pt-3 pt-lg-0">
                 <!-- Ads Start -->
-                <div class="mb-3 pb-3">
+                {{-- <div class="mb-3 pb-3">
                     <img class="img-fluid" src="{{ asset('img/ads-example.jpeg') }}" alt="">
-                </div>
+                </div> --}}
                 <!-- Ads End -->
 
                 <!-- Popular News Start -->
@@ -50,9 +50,10 @@
                                 <a href="{{ url('category/'. $tranding->category->slug) }}">{{ $tranding->category->name
                                     }}</a>
                                 <span class="px-1">/</span>
-                                <span>{{ $tranding->date_published->diffForHumans() }}</span>
+                                <span>{{ $tranding->date_published->format('d F Y') }}</span>
                             </div>
-                            <a class="h6 m-0" href="{{ url('blog/'. $tranding->slug) }}">{{ $tranding->title }}</a>
+                            <a class="h6 m-0" href="{{ url('blog/'. $tranding->slug) }}" style="font-size: 10px">{{
+                                $tranding->title }}</a>
                         </div>
                     </div>
                     @endforeach

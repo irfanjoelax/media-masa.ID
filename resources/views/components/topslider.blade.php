@@ -7,7 +7,7 @@
                     style="width: 80px; height: 80px; object-fit: cover;">
                 <div class="d-flex align-items-center bg-light px-3" style="height: 80px;">
                     <a class="text-secondary font-weight-semi-bold" href="{{ url('blog/'. $topslider->slug) }}">
-                        {{ $topslider->title }}
+                        {{ str()->words($topslider->title,6,'...') }}
                     </a>
                 </div>
             </div>

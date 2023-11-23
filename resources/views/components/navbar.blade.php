@@ -12,7 +12,7 @@
                 <a href="{{ url('/') }}" class="nav-item nav-link active">Beranda</a>
 
                 @foreach ($categories as $menu)
-                    <a href="{{ url('category/'. $menu->slug) }}" class="nav-item nav-link">{{ $menu->name }}</a>
+                <a href="{{ url('category/'. $menu->slug) }}" class="nav-item nav-link">{{ $menu->name }}</a>
                 @endforeach
 
 
@@ -25,13 +25,13 @@
                     </div>
                 </div> --}}
             </div>
-            <div class="input-group ml-auto" style="width: 100%; max-width: 300px;">
-                <input type="text" class="form-control" placeholder="Search..">
+            <form action="{{ url('/search') }}" method="GET" class="input-group ml-auto"
+                style="width: 100%; max-width: 300px;">
+                <input type="search" name="keyword" class="form-control" placeholder="Search..">
                 <div class="input-group-append">
-                    <button class="input-group-text text-secondary"><i
-                            class="fa fa-search"></i></button>
+                    <button class="input-group-text text-secondary"><i class="fa fa-search"></i></button>
                 </div>
-            </div>
+            </form>
         </div>
     </nav>
 </div>

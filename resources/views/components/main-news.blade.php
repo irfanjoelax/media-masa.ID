@@ -12,7 +12,7 @@
                                 <a class="text-white" href="{{ url('category/'. $mainNews->category->slug) }}">{{
                                     $mainNews->category->name }}</a>
                                 <span class="px-2 text-white">/</span>
-                                <span class="text-white">{{ $mainNews->date_published->diffForHumans() }}</span>
+                                <span class="text-white">{{ $mainNews->date_published->format('d F Y') }}</span>
                             </div>
                             <a class="h2 m-0 text-white font-weight-bold" href="{{ url('blog/'. $mainNews->slug) }}">
                                 {{ $mainNews->title }}
